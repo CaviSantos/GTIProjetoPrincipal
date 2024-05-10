@@ -1,0 +1,494 @@
+
+::after,
+::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+    transition: .3s;
+
+}
+/*nav bar e inico com banner (estilizar aqui)*/
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #23232e;
+    height: 8vh;
+}
+body{
+    margin: 0;
+    background: url(./assets/background-css.png) no-repeat center fixed;
+    background-size: cover;
+    height: 92vh;
+
+
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+
+}
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.foco{
+    width: 100%;
+    height: 300px;
+    background: url(./assets/banner-top.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+.foco::before{
+    content: '';
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+}
+.foco h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    padding-top: 190px;
+    margin-bottom: 30px;
+}
+.botao{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 15px 35px 15px 25px;
+    background: #23232e;
+    border-radius: 5px;
+}
+/* coloque aqui a estilização do card*/
+.conteiner-card{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+.card{
+    margin: 25px;
+    background-color: #23232e;
+    color: white;
+    width: 300px;
+    height:415px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    text-align: center;
+
+}
+.card>h3{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.card>img{
+    width: 100%;
+    height: 25vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card>p{
+    font-size: small;
+    padding: 10px 10px;
+    font-family: "Poppins", sans-serif;
+}
+.titulo-serv{
+    padding-top: 30px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white ;
+    font-size: 35px;
+}
+
+/*colocar aq a estilização do portifólio*/
+.titulo-portf{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    padding: 50px;
+}
+
+.conteiner-portf{
+    display: flex;
+    gap: 30px 30px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.porf{
+    width: 350px;
+    height: 197px;
+    background-color: #23232e;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+.porf>p{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1.5px;
+    
+}
+.porf>img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* colocar aqui a estilização do sobre*/
+
+.titulodasessao>h1{
+    color: white;
+    margin:0.3em;
+    padding: 0.3em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size:35px;
+    
+}
+.checkpoint>h2{
+    margin-bottom: 0.5em;
+    color: white;
+    
+}
+.titulodasessao{
+    text-align: center;
+    color: #ffffff;
+}
+.titulodasessao>p{
+    color: #e0e0e0;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+.timeline{
+    margin: 5em auto;
+    max-width: 34.15em;
+}
+.checkpoint{
+    max-width:34em ;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+.checkpoint>div{
+    border: 2px solid;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+.checkpoint>p{
+    line-height: 27px;
+    color:white;
+}
+.checkpoint:nth-child(odd){
+    border-left: 3px solid white ;
+    padding-left:3em ;
+    transform: translateX(17em);
+}
+.checkpoint:nth-child(even)::before{
+    right: 0;
+}
+.checkpoint:nth-child(even)::before,
+.checkpoint:nth-child(odd)::before{
+    content: '';
+    background: #000000;
+    box-shadow: 0 0 0 0.5em #ffffff;
+    width: 0.1em;
+    height: 0.1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+.checkpoint:nth-child(odd)>div::before{
+    right: -0.5em;
+}
+@media screen and (max-width: 1150px){
+    .timeline{
+        width: 80vw;
+    }
+    .timeline .checkpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .checkpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint>div::before{
+        top: -0.5em;
+        left: 50%;
+        transform: translateY(-50%);
+    }
+}
+.timeline-background{
+    color: #fff;
+}
+
+
+/* colocar aqui a estilização da equipe*/
+
+.conteiner-equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pessoa {
+    margin: 15px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #23232e;
+    overflow: hidden;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.pessoa h5, .pessoa span {
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.pessoa span {
+    font-size: 12px;
+    color: #cccccc;
+
+}
+.equipe{
+    color: white;
+    margin: 0.5em 0em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size:35px;
+    text-align: center;
+    
+}
+#equipe{
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.redes-sociais{
+    margin-top: 5px;
+    font-size: 16px;
+}
+.redes-sociais>a{
+    margin-right: 10px;
+}
+.redes-sociais>a:hover{
+    color: aquamarine;
+}
+/*pré rodapé colocar aqui a estilização*/
+
+.texto-empresa>h1{
+    color: white;
+    margin: 0.5em 0em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size:35px;
+    text-align: center;
+}
+.texto-empresa>p{
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.conteiner-empresa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #23232e;
+}
+
+.empresa{
+    margin: 15px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logoEMP{
+    width: 100px;
+    height: 60px;
+    border-radius: 25%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.logoEMP>img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/*estilização do formulário*/
+
+
+.conteiner-form{
+    background:url(./assets/backcground-form.webp) no-repeat center center;
+    background-size: cover;
+    border-top: solid 1px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+.titulo-form{
+    color: #fff;
+}
+
+.form-caixa{
+    display: flex;
+    flex-direction: column;
+    background-color: #23232e;
+    
+    border-radius: 8px;
+    width: 700px;
+}
+.form-caixa .titulo-form{
+    padding: 24px 32px;
+    font-size: 24px;
+    border-bottom: thin solid #ffffff;
+}
+.form-caixa form{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.form-caixa input,
+.form-caixa textarea{
+    width: calc(50% - 8px);
+    height:48px;
+    border-radius: 6px;
+    border: thin solid #999;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.form-caixa input:first-child{
+    margin-right: 16px;
+}
+.form-caixa input[name=email]{
+    width: 100%;
+}
+.form-caixa textarea{
+    width: 100%;
+    height: 80px;
+    padding: 16px;
+}
+.form-caixa button{
+    display: block;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color:#15151b;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    border-style:ridge;
+}
+.form-caixa button:hover{
+    background-color:#323242;
+}
+
+.conteiner-rodape{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #15151b;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    gap: 100px;
+}
+.ordenar1{
+    order: 1;
+}
+.redes-sociais-rodape{
+    order: 2;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.ordenar2{
+    order: 3;
+}
+.redes-sociais-rodape>a:hover{
+    color: aquamarine;
+}
+
+/*escurecer o background 2 e também colocar o rodapé e as redes sociais da marca principal. colocar no girhub*/
