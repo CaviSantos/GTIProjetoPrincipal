@@ -5,51 +5,88 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 a{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     transition: .3s;
 
 }
-/*nav bar e inico com banner (estilizar aqui)*/
-.logo{
-    font-size: 24px;
+/*banner*/
+
+body {    
+    background-image: linear-gradient(0.25turn,#03318d,#ca59ca);
+}
+
+.logo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-bottom: 20px; 
+    text-align: center;
+    margin-top: 1rem;
 }
-nav{
-    background-color: black;
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    background-color: #001848;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color: #23232e;
-    height: 8vh;
-}
-body{
-    margin: 0;
-    background: url(./assets/background-css.png) no-repeat center fixed;
-    background-size: cover;
-    height: 92vh;
-
+    min-height: 8vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
-.nav-list{
+
+.nav-list {
     list-style: none;
     display: flex;
-
+    padding: 0;
 }
-.nav-list li{
+
+.nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
+    padding-bottom:1rem;
 }
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        top: auto; 
+    }
+
+    .nav-list {
+        flex-direction: row; 
+        margin-top: 10px; 
+        font-size: 70%;
+    }
+
+    .nav-list li {
+        margin-left: 10px; 
+    }
+}
+
+/*banner*/
 
 .foco{
     width: 100%;
-    height: 300px;
+    height: 92vh;
     background: url(./assets/banner-top.png) no-repeat center center;
     background-size: cover;
     text-align: center;
+
 }
 .foco::before{
     content: '';
@@ -63,15 +100,16 @@ body{
     position: fixed;
 }
 .foco h1{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: white;
     text-decoration: none;
     text-shadow: 2px 2px 2px black;
     text-align: center;
-    padding-top: 190px;
-    margin-bottom: 30px;
+    padding-top: 20rem;
+    padding-bottom: 3rem;
+
 }
 .botao{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -80,34 +118,36 @@ body{
     font-size: 17px;
     text-transform: uppercase;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 15px 35px 15px 25px;
-    background: #23232e;
+    background: #ffffff;
     border-radius: 5px;
 }
-/* coloque aqui a estilização do card*/
+
+/*card*/
 .conteiner-card{
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    
+    padding: 20px;
 }
 .card{
     margin: 25px;
-    background-color: #23232e;
+    background: #483078;
     color: white;
     width: 300px;
     height:415px;
     border-radius: 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: #001848 1px 1px 1px 1px, #906090 2px 2px 2px 2px;
     text-align: center;
-
+    max-width: 90%;
+    height: auto;
 }
 .card>h3{
     font-size: 30px;
     padding-top: 10px;
 }
 .card>img{
+    height: auto;
     width: 100%;
     height: 25vh;
     border-top-left-radius: 10px;
@@ -116,7 +156,8 @@ body{
 .card>p{
     font-size: small;
     padding: 10px 10px;
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 .titulo-serv{
     padding-top: 30px;
@@ -126,152 +167,160 @@ body{
     color: white ;
     font-size: 35px;
 }
+@media screen and (max-width: 768px) {
 
+    .conteiner-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin: 15px;
+    }
+}
 /*colocar aq a estilização do portifólio*/
-.titulo-portf{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.titulo-portf {
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
-    font-size: 35px;
+    text-transform: uppercase;
     text-align: center;
-    padding: 50px;
-}
-
-.conteiner-portf{
-    display: flex;
-    gap: 30px 30px;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-.porf{
-    width: 350px;
-    height: 197px;
-    background-color: #23232e;
-    border-radius: 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
-}
-.porf>p{
-    color: white;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 1.5px;
-    
-}
-.porf>img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* colocar aqui a estilização do sobre*/
-
-.titulodasessao>h1{
-    color: white;
-    margin:0.3em;
-    padding: 0.3em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    font-size:35px;
-    
-}
-.checkpoint>h2{
-    margin-bottom: 0.5em;
-    color: white;
-    
-}
-.titulodasessao{
-    text-align: center;
+    padding: 2rem;
     color: #ffffff;
 }
-.titulodasessao>p{
-    color: #e0e0e0;
-    font-size: 1.3em;
-    letter-spacing: 2px;
+
+.conteiner-portf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
 }
-.timeline{
-    margin: 5em auto;
-    max-width: 34.15em;
+
+.porf {
+    width: 300px;
+    background-color: #483078;
+    border-radius: 10px;
+    box-shadow: 3px 2px 4px #906090;
+    overflow: hidden;
 }
-.checkpoint{
-    max-width:34em ;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    position: relative;
+
+.porf>img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
-.checkpoint>div{
-    border: 2px solid;
-    border-radius: 1em;
-    padding: 1.5em;
+
+.porf>h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem;
+    color: #ffffff;
 }
-.checkpoint>p{
-    line-height: 27px;
-    color:white;
+
+.porf>p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    color: #ffffff;
 }
-.checkpoint:nth-child(odd){
-    border-left: 3px solid white ;
-    padding-left:3em ;
-    transform: translateX(17em);
-}
-.checkpoint:nth-child(even)::before{
-    right: 0;
-}
-.checkpoint:nth-child(even)::before,
-.checkpoint:nth-child(odd)::before{
-    content: '';
-    background: #000000;
-    box-shadow: 0 0 0 0.5em #ffffff;
-    width: 0.1em;
-    height: 0.1em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-}
-.checkpoint:nth-child(odd) div::before{
-    left: -0.5em;
-}
-.checkpoint:nth-child(odd)>div::before{
-    right: -0.5em;
-}
-@media screen and (max-width: 1150px){
-    .timeline{
-        width: 80vw;
+
+@media screen and (max-width: 768px) {
+    .conteiner-portf {
+        flex-direction: column;
+        align-items: center;
     }
-    .timeline .checkpoint{
+
+    .porf {
         width: 100%;
-        transform: none;
-        padding-left: 0;
-        padding-right: 0;
-        border: none;
-    }
-    .timeline .checkpoint::before{
-        width: 3px;
-        height: 4em;
-        top: -2em;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .timeline .checkpoint>div::before{
-        top: -0.5em;
-        left: 50%;
-        transform: translateY(-50%);
+        max-width: 400px;
     }
 }
-.timeline-background{
+
+/*linha do tempo (timeline)*/
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    
+}
+
+.conteiner1{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    background: (#906090, 0.7);
+    
+}
+.text-box>h2,small,p{
     color: #fff;
+    
 }
 
+.text-box{
+    padding: 20px 30px;
+    background:#301860;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.conteiner-esquerdo{
+    left: 0;
+}
+.conteiner-direito{
+    left: 50%;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #906090;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+}
+.text-box>h2{
+    font-weight: 600;
+}
+.text-box>small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
 
-/* colocar aqui a estilização da equipe*/
+@media screen and (max-width: 900px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .conteiner1{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box>small{
+        margin-bottom: 10px;
+    }
+    .conteiner-direito{
+        left: 0;
+    }
+}
+/*equipe*/
 
 .conteiner-equipe {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #483078;
 }
 
 .pessoa {
@@ -287,7 +336,7 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #23232e;
+    background-color: #000000;
     overflow: hidden;
 }
 
@@ -335,7 +384,7 @@ body{
 .redes-sociais>a:hover{
     color: aquamarine;
 }
-/*pré rodapé colocar aqui a estilização*/
+/*pré rodapé*/
 
 .texto-empresa>h1{
     color: white;
@@ -346,6 +395,7 @@ body{
     text-align: center;
 }
 .texto-empresa>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     letter-spacing: 2px;
     text-align: center;
@@ -357,7 +407,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #23232e;
+    background-color: #604878;
 }
 
 .empresa{
@@ -384,7 +434,7 @@ body{
     object-fit: cover;
 }
 
-/*estilização do formulário*/
+/*formulário*/
 
 
 .conteiner-form{
@@ -404,7 +454,7 @@ body{
 .form-caixa{
     display: flex;
     flex-direction: column;
-    background-color: #23232e;
+    background: linear-gradient(0.25turn,#301860, #906090);
     
     border-radius: 8px;
     width: 700px;
@@ -423,6 +473,7 @@ body{
 
 .form-caixa input,
 .form-caixa textarea{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: calc(50% - 8px);
     height:48px;
     border-radius: 6px;
@@ -450,7 +501,7 @@ body{
     width: 180px;
     height: 48px;
     border-radius: 8px;
-    background-color:#15151b;
+    background-color:#001848;
     color: #fff;
     font-weight: bold;
     font-size: 16px;
@@ -459,38 +510,46 @@ body{
     border-style:ridge;
 }
 .form-caixa button:hover{
-    background-color:#323242;
+    background-color:#906090;
 }
 
-.conteiner-rodape{
-    height: 50px;
+/*rodapé*/
+
+.conteiner-rodape {
+    background-color: #001848;
+}
+
+.rodape {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #15151b;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
 }
 
-.rodape{
-    display: flex;
-    flex-direction: column;
-    flex-flow: row wrap;
-    gap: 100px;
+.ordenar1 {
+    order: 1; 
 }
-.ordenar1{
-    order: 1;
+
+.ordenar2 {
+    order: 3; 
 }
-.redes-sociais-rodape{
+
+.redes-sociais-rodape {
+    text-align: center; 
     order: 2;
-    margin-top: 5px;
-    font-size: 16px;
-}
-.ordenar2{
-    order: 3;
-}
-.redes-sociais-rodape>a:hover{
-    color: aquamarine;
 }
 
-/*escurecer o background 2 e também colocar o rodapé e as redes sociais da marca principal. colocar no girhub*/
-/*mudar as cores de fundo das div para ter mais  congruencia*/
-/*alterar a time line (está muito feia)*/
+
+@media screen and (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociais-rodape {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
