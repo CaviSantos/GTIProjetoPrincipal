@@ -70,7 +70,7 @@ nav {
     .nav-list {
         flex-direction: row; 
         margin-top: 10px; 
-        font-size: 70%;
+        font-size: 58%;
     }
 
     .nav-list li {
@@ -125,6 +125,13 @@ nav {
 }
 
 /*card*/
+.titulo-serv>p{
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size:15px;
+}
 .conteiner-card{
     display: flex;
     justify-content: center;
@@ -177,15 +184,23 @@ nav {
         margin: 15px;
     }
 }
-/*colocar aq a estilização do portifólio*/
+/*portifólio*/
 
-.titulo-portf {
+.titulo-portf>h2{
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
     padding: 2rem;
     color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.titulo-portf>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .conteiner-portf {
@@ -219,6 +234,12 @@ nav {
     color: #ffffff;
 }
 
+.nome-jogo{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .porf>p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
@@ -239,7 +260,19 @@ nav {
 }
 
 /*linha do tempo (timeline)*/
-
+/*chamei a linha do tempo de timeline apenas por motivos de que eu acho mais fácil de digitar e é menor kkk (mesma coisa p/ text-box*/
+.sobre-titulo>h2{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sobre-titulo>p{
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .timeline{
     position: relative;
     max-width: 1200px;
@@ -256,7 +289,7 @@ nav {
 }
 .text-box>h2,small,p{
     color: #fff;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .text-box{
@@ -330,6 +363,10 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+.pessoa>h5,span{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
 }
 
 .foto-perfil {
@@ -518,7 +555,10 @@ nav {
 .conteiner-rodape {
     background-color: #001848;
 }
+.rodape>.ordenar1,.ordenar2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
 .rodape {
     display: flex;
     justify-content: center;

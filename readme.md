@@ -9,11 +9,14 @@ tentar deixar a timeline reta e alinhada - se possível colocar um traço a cada
 
 
 1- nav bar *ok*
-2- banner
+2- banner *ok*
 3- serviços *ok*
-4- portif
-5- timeline
+4- portif *ok*
+5- timeline *ok*
 6- equipe *ok*
 7- parceiros *ok*
 8- form *ok*
 9- rodapé *ok*
+
+
+projeto (concluído)
