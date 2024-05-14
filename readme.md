@@ -19,4 +19,4 @@ tentar deixar a timeline reta e alinhada - se possível colocar um traço a cada
 9- rodapé *ok*
 
 
-projeto (concluído)
+projeto (concluído).
